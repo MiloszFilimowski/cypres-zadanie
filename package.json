@@ -3,14 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run",
-    "test:headless": "cypress run --headless",
-    "test:chrome": "cypress run --browser chrome",
-    "test:firefox": "cypress run --browser firefox",
-    "test:headed": "cypress run --headed",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
-    "cypress:run:headless": "cypress run --headless --browser electron"
+    "cypress:run": "cypress run --headed",
+    "cypress:run:headless": "cypress run"
   },
   "keywords": [
     "cypress",

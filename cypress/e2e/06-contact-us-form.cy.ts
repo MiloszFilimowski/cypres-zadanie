@@ -25,7 +25,7 @@ describe("Test Case 6: Contact Us Form", () => {
       "Success! Your details have been submitted successfully."
     ).should("be.visible");
     cy.get(".btn.btn-success").contains("Home").click();
-    cy.url().should("eq", Cypress.config().baseUrl + "/");
+    cy.url().should("eq", Cypress.config().baseUrl);
     cy.get(selectors.logo).should("be.visible");
   });
 });
