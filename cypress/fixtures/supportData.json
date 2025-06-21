@@ -1,0 +1,20 @@
+{
+  "standardInquiry": {
+    "contactName": "Sarah Mitchell",
+    "contactEmail": "sarah.mitchell@example.org",
+    "inquiryTopic": "Product Quality Question",
+    "messageContent": "I would like to inquire about the quality standards and materials used in your product manufacturing process."
+  },
+  "technicalSupport": {
+    "contactName": "David Chen",
+    "contactEmail": "david.chen@techsupport.net",
+    "inquiryTopic": "Website Technical Issue",
+    "messageContent": "Experiencing difficulties with the checkout process. The payment section seems to be unresponsive on mobile devices."
+  },
+  "generalFeedback": {
+    "contactName": "Lisa Rodriguez",
+    "contactEmail": "lisa.rodriguez@feedback.com",
+    "inquiryTopic": "Service Enhancement Suggestion",
+    "messageContent": "Your service has been excellent. I would suggest adding more filtering options in the product catalog for better user experience."
+  }
+}

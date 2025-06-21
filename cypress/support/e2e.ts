@@ -1,2 +1,2 @@
 import "./commands";
-import "./interfaces";
+import "./dataTypes";

@@ -1,30 +1,30 @@
 /// <reference types="cypress" />
 
-import "./interfaces";
-import { selectors } from "./selectors/selectors";
-import { UserData, LoginData } from "./interfaces";
+import "./dataTypes";
+import { elementLocators } from "./selectors/selectors";
+import { CustomerProfile, LoginCredentials } from "./dataTypes";
 
-Cypress.Commands.add("registerUser", (userData: UserData) => {
-  cy.get(selectors.loginLink).click();
-  cy.get(selectors.signupNameInput).type(userData.name);
-  cy.get(selectors.signupEmailInput).type(userData.email);
-  cy.get(selectors.signupButton).click();
-  cy.get(selectors.titleMr).check();
-  cy.get(selectors.passwordField).type(userData.password);
-  cy.get(selectors.firstNameField).type(userData.firstName);
-  cy.get(selectors.lastNameField).type(userData.lastName);
-  cy.get(selectors.addressField).type(userData.address);
-  cy.get(selectors.countryDropdown).select(userData.country);
-  cy.get(selectors.stateField).type(userData.state);
-  cy.get(selectors.cityField).type(userData.city);
-  cy.get(selectors.zipcodeField).type(userData.zipcode);
-  cy.get(selectors.mobileNumberField).type(userData.mobileNumber);
-  cy.get(selectors.createAccountButton).click();
+Cypress.Commands.add("createNewCustomer", (profile: CustomerProfile) => {
+  cy.get(elementLocators.authenticationLink).click();
+  cy.get(elementLocators.userNameInput).type(profile.fullName);
+  cy.get(elementLocators.userEmailInput).type(profile.emailAddress);
+  cy.get(elementLocators.createAccountBtn).click();
+  cy.get(elementLocators.genderMale).check();
+  cy.get(elementLocators.accountPassword).type(profile.accountPassword);
+  cy.get(elementLocators.givenName).type(profile.givenName);
+  cy.get(elementLocators.familyName).type(profile.familyName);
+  cy.get(elementLocators.streetAddress).type(profile.streetAddress);
+  cy.get(elementLocators.countrySelection).select(profile.countryName);
+  cy.get(elementLocators.regionField).type(profile.regionName);
+  cy.get(elementLocators.cityName).type(profile.cityName);
+  cy.get(elementLocators.postalCode).type(profile.postalCode);
+  cy.get(elementLocators.phoneNumber).type(profile.phoneNumber);
+  cy.get(elementLocators.accountCreationBtn).click();
 });
 
-Cypress.Commands.add("loginUser", (loginData: LoginData) => {
-  cy.get(selectors.loginLink).click();
-  cy.get(selectors.loginEmailInput).type(loginData.email);
-  cy.get(selectors.loginPasswordInput).type(loginData.password);
-  cy.get(selectors.loginButton).click();
+Cypress.Commands.add("loginCustomer", (credentials: LoginCredentials) => {
+  cy.get(elementLocators.authenticationLink).click();
+  cy.get(elementLocators.emailInput).type(credentials.emailAddress);
+  cy.get(elementLocators.passwordInput).type(credentials.accountPassword);
+  cy.get(elementLocators.submitButton).click();
 });

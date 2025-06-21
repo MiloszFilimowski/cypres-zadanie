@@ -1,0 +1,28 @@
+{
+  "primaryUser": {
+    "fullName": "Emma Johnson",
+    "emailAddress": "emma.johnson@testmail.net",
+    "accountPassword": "MySecureKey789",
+    "givenName": "Emma",
+    "familyName": "Johnson",
+    "streetAddress": "456 Oak Avenue",
+    "countryName": "Canada",
+    "regionName": "Ontario",
+    "cityName": "Toronto",
+    "postalCode": "M5V 3A8",
+    "phoneNumber": "4169876543"
+  },
+  "secondaryUser": {
+    "fullName": "Marcus Wilson",
+    "emailAddress": "marcus.wilson@testdomain.org",
+    "accountPassword": "TestingPass321!",
+    "givenName": "Marcus",
+    "familyName": "Wilson",
+    "streetAddress": "789 Pine Street",
+    "countryName": "United States",
+    "regionName": "Texas",
+    "cityName": "Austin",
+    "postalCode": "73301",
+    "phoneNumber": "5123456789"
+  }
+}

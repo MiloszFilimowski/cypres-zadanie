@@ -1,23 +1,22 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  projectId: "essa",
+  projectId: "webshop-qa",
   chromeWebSecurity: false,
-  defaultCommandTimeout: 10000,
+  defaultCommandTimeout: 12000,
   env: {
-    username: "janek",
-    password: "TajneHa$lo123",
-    email: "janek@tester.com",
+    testUser: "alexsmith",
+    userPassword: "SecurePass456!",
+    testEmail: "alexsmith@qatest.org",
   },
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      // Node event handlers for test execution
     },
-    // baseUrl: 'https://automationteststore.com/',
     baseUrl: "https://www.automationexercise.com/",
-    specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx}", // Ścieżka do plików testowych
-    supportFile: "cypress/support/e2e.ts", // Plik z funkcjami wspierającymi testy
-    viewportWidth: 1280, // Szerokość okna przeglądarki
-    viewportHeight: 720, // Wysokość okna przeglądarki
+    specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx}", // Test file patterns
+    supportFile: "cypress/support/e2e.ts", // Support utilities
+    viewportWidth: 1440, // Browser window width
+    viewportHeight: 900, // Browser window height
   },
 });
