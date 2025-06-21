@@ -1,0 +1,29 @@
+{
+  "name": "cypres-zadanie",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "test:headless": "cypress run --headless",
+    "test:chrome": "cypress run --browser chrome",
+    "test:firefox": "cypress run --browser firefox",
+    "test:headed": "cypress run --headed",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:run:headless": "cypress run --headless --browser electron"
+  },
+  "keywords": [
+    "cypress",
+    "e2e",
+    "testing",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "Cypress E2E testing project for Automation Exercise website",
+  "devDependencies": {
+    "cypress": "^14.5.0",
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.5"
+  }
+}
